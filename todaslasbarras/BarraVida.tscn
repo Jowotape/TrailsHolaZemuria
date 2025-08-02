@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://pqa72mvi6yia"]
+
+[ext_resource type="Script" uid="uid://bwjyta0o0bfuw" path="res://todaslasbarras/barra_vida.gd" id="1_yscud"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hprgc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gh3ui"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o585h"]
+bg_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs8vn"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="BarraVida" type="ProgressBar"]
+self_modulate = Color(0.847257, 0, 0.108553, 1)
+z_index = 1
+offset_right = 240.0
+offset_bottom = 4.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_hprgc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gh3ui")
+value = 60.0
+show_percentage = false
+script = ExtResource("1_yscud")
+
+[node name="Barradaño" type="ProgressBar" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_o585h")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qs8vn")
+value = 80.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

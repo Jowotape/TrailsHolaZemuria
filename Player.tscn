@@ -1,0 +1,263 @@
+[gd_scene load_steps=27 format=3 uid="uid://bknmm2pgb52p4"]
+
+[ext_resource type="Script" uid="uid://wo1atys8m7ya" path="res://character_body_2d.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://dx3iu3ltkni62" path="res://Player/Estelle/ch00000_007.png" id="1_xhfnw"]
+[ext_resource type="Texture2D" uid="uid://bihdo4rl0w5i6" path="res://Player/Lloyd/josette.png" id="2_e80uo"]
+[ext_resource type="Texture2D" uid="uid://b5ds8ftcbmqyx" path="res://Level/Sprite/image_2025-07-30_205913026.png" id="3_kne1u"]
+[ext_resource type="PackedScene" uid="uid://pqa72mvi6yia" path="res://todaslasbarras/BarraVida.tscn" id="4_tdg3f"]
+[ext_resource type="Script" uid="uid://dr0708nakt5ug" path="res://character_body_2d_2.gd" id="5_cxr5p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ncpa"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(0, 64, 51, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi0c6"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(51, 64, 51, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp6x6"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(102, 64, 51, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tkgg"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(153, 64, 51, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6ohk"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(153, 32, 51, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv870"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(0, 0, 69, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e80uo"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(5, 0, 67, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdg3f"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(139, 0, 67, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtqjt"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(5, 0, 67, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxr5p"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(72, 0, 67, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oudfo"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(102, 64, 51, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6rpx"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(153, 32, 51, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3kul"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(102, 32, 51, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jatw7"]
+atlas = ExtResource("1_xhfnw")
+region = Rect2(153, 64, 51, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kne1u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ncpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi0c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp6x6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tkgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6ohk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv870")
+}],
+"loop": false,
+"name": &"heavy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e80uo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv870")
+}],
+"loop": true,
+"name": &"idle Estelle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e80uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdg3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtqjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxr5p")
+}],
+"loop": false,
+"name": &"light",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oudfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6rpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3kul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jatw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv870")
+}],
+"loop": false,
+"name": &"medium",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
+size = Vector2(29, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdg3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtqjt"]
+size = Vector2(67.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ncpa"]
+size = Vector2(78, 57)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cxr5p"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(0, 4)
+script = ExtResource("1_kpjcp")
+
+[node name="anim" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -38)
+scale = Vector2(0.993151, 1)
+sprite_frames = SubResource("SpriteFrames_kne1u")
+animation = &"light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1, -37)
+shape = SubResource("RectangleShape2D_e80uo")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-1, -147)
+zoom = Vector2(2.5, 2.5)
+position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="LightCollision" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(32, -33)
+scale = Vector2(1.64996, 0.719999)
+shape = SubResource("RectangleShape2D_tdg3f")
+disabled = true
+debug_color = Color(0.980392, 0, 0, 0.419608)
+
+[node name="MediumCollision" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(35.25, -33)
+shape = SubResource("RectangleShape2D_dtqjt")
+disabled = true
+debug_color = Color(0.975669, 0, 0.438074, 0.42)
+
+[node name="HeavyCollision" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(55, -41)
+shape = SubResource("RectangleShape2D_5ncpa")
+disabled = true
+debug_color = Color(0.969726, 0, 0.459458, 0.42)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D"]
+layer = 6
+
+[node name="BarraVida" parent="CharacterBody2D/CanvasLayer" instance=ExtResource("4_tdg3f")]
+scale = Vector2(2.57895, 7.40727)
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." groups=["2player"]]
+position = Vector2(189, 4)
+script = ExtResource("5_cxr5p")
+
+[node name="anim" type="AnimatedSprite2D" parent="CharacterBody2D2"]
+position = Vector2(1, -38)
+scale = Vector2(0.410812, 0.496071)
+sprite_frames = SubResource("SpriteFrames_kne1u")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(1, -37)
+shape = SubResource("RectangleShape2D_e80uo")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D2"]
+position = Vector2(-1, -147)
+zoom = Vector2(2.5, 2.5)
+position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2/Area2D"]
+position = Vector2(32, -33)
+scale = Vector2(1.64996, 0.719999)
+shape = SubResource("RectangleShape2D_tdg3f")
+debug_color = Color(0.980392, 0, 0, 0.419608)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D2"]
+
+[node name="BarraVida" parent="CharacterBody2D2/CanvasLayer" instance=ExtResource("4_tdg3f")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.00012
+offset_top = -688.0
+offset_right = 242.0
+offset_bottom = -684.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(-2.56239, -7.76043)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -152)
+scale = Vector2(0.547104, 0.400427)
+texture = ExtResource("3_kne1u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+position = Vector2(0, 379.595)
+scale = Vector2(1.82781, 2.49733)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_cxr5p")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D2/Area2D" to="CharacterBody2D2" method="_on_area_2d_body_entered"]
